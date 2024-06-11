@@ -1,0 +1,12 @@
+
+task: os_openbookqa
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/openbookqa.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "Consider common scenarios or outcomes that fit the context of the sentence. Attempt to logically complete the sentences based on common knowledge and reasoning.
+Question: {{question}}
+Answer:"
+doc_to_target: ""

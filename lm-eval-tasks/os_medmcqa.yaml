@@ -1,0 +1,12 @@
+
+task: os_medmcqa
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/medmcqa.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "Answer the following question about medicine.
+Question: {{question}}
+Answer:"
+doc_to_target: ""

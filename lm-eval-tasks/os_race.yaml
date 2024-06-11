@@ -1,0 +1,13 @@
+
+task: os_race
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/race.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "I will give you passage with question. Please, answer the question.
+Passage: {{passage}}
+Question: {{question}}
+Answer:"
+doc_to_target: ""

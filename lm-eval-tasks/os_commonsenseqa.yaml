@@ -1,0 +1,12 @@
+
+task: os_commonsenseqa
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/commonsenseqa.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "You will be presented with a variety of questions that require an understanding of everyday scenarios, human behaviors, and common sense. Your task is to provide the best possible answer to each question based solely on your understanding and reasoning.
+Question: {{question}}
+Answer:"
+doc_to_target: ""

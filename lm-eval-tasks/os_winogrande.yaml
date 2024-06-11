@@ -1,0 +1,12 @@
+
+task: os_winogrande
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/winogrande.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "Please put the correct words in place of _. Give only the word that fits the sentence.
+Question: {{question}}
+Answer:"
+doc_to_target: ""

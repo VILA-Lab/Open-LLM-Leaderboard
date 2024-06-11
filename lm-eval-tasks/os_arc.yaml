@@ -1,0 +1,12 @@
+
+task: os_arc
+dataset_path: csv
+dataset_kwargs:
+  data_files:
+    test: questions/arc.csv
+test_split: test
+output_type: generate_until
+doc_to_text: "Answer the following question.
+Question: {{question}}
+Answer:"
+doc_to_target: ""
