@@ -6,9 +6,9 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/VILA-Lab/Open-LLM-Leaderboard/issues)
 
-We introduce the Open-LLM-Leaderboard to track various LLMs’ performance on open-style questions and reflect their true capability.
+We introduce the [Open-LLM-Leaderboard](https://arxiv.org/abs/2406.07545) to track various LLMs’ performance on open-style questions and reflect their true capability.
 You can use OSQ-bench questions and prompts to evaluate your models automatically with an LLM-based evaluator.
-You can look at the leaderboard on [HuggingFace](https://huggingface.co/spaces/Open-Style/OSQ-Leaderboard). 
+The leaderboard is available for viewing on [HuggingFace](https://huggingface.co/spaces/Open-Style/OSQ-Leaderboard). 
 
 ## Contents
 - [Open-LLM-Leaderboard: Open-Style Question Evaluation](#open-llm-leaderboard-open-style-question-evaluation)
@@ -135,10 +135,10 @@ Our leaderboards are based on the [OSQ-bench](#osq-bench). We have 2 (Large and 
 ## Citation
 
 ```
-@article{,
+@article{myrzakhan2024openllmleaderboard,
   title={Open-LLM-Leaderboard: From Multi-choice to Open-style Questions for LLMs Evaluation, Benchmark, and Arena},
   author={Aidar Myrzakhan, Sondos Mahmoud Bsharat, Zhiqiang Shen},
-  journal={arXiv preprint },
+  journal={arXiv preprint arXiv:2406.07545},
   year={2024},
 }
 ```
