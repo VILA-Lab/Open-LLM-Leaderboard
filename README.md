@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src="assets/logo.jpg" alt="OSQ" style="width: 35%; min-width: 150px; display: block; margin: auto;">
+<img src="assets/logo.jpg" alt="OSQ" style="width: 28%; min-width: 150px; display: block; margin: auto;">
 </p>
 
 # Open-LLM-Leaderboard: Open-Style Question Evaluation
