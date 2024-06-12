@@ -1,18 +1,15 @@
-
-
-# Open-LLM-Leaderboard: Open-Style Question Evaluation
-
-
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/open_llm_lb.svg?style=social&label=Follow%20%40open_llm_lb)](https://x.com/open_llm_lb)
-[![Webpage](https://img.shields.io/badge/webpage%20-8A2BE2)](https://vila-lab.github.io/Open-LLM-Leaderboard-Website/)
-[![Data License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/VILA-Lab/Open-LLM-Leaderboard/issues)
-
 <p align="center" width="100%">
 <img src="assets/logo.jpg" alt="OSQ" style="width: 35%; min-width: 150px; display: block; margin: auto;">
 </p>
 
+# Open-LLM-Leaderboard: Open-Style Question Evaluation
+
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/open_llm_lb.svg?style=social&label=Follow%20%40open_llm_lb)](https://x.com/open_llm_lb)
+[![Webpage](https://img.shields.io/badge/webpage%20-8A2BE2)](https://vila-lab.github.io/Open-LLM-Leaderboard-Website/)
+<a href="https://arxiv.org/abs/2406.07545"><img src="https://img.shields.io/badge/arXiv-2406.07545-b31b1b.svg" alt="arXiv"></a>
+[![Data License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/VILA-Lab/Open-LLM-Leaderboard/issues)
 
 We introduce the [Open-LLM-Leaderboard](https://arxiv.org/abs/2406.07545) to track various LLMs’ performance on open-style questions and reflect their true capability.
 You can use OSQ-bench questions and prompts to evaluate your models automatically with an LLM-based evaluator.
