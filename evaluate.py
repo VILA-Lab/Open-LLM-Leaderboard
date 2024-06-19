@@ -31,10 +31,7 @@ def run(prompts, num_threads):
     return idx_and_result
 
 def create_chat_prompt(question, llm_answer, answer):
-    sys_msg = """Evaluate the answer of a AI model to a question.
-    You will be provided with the question, the AI model's answer, and the correct answer. Your task is to evaluate the AI model's response and determine whether it is Correct or Incorrect.
-    Grade the AI model answers based ONLY on their factual accuracy. It is OK if the AI model answer contains more information than the true answer, as long as it does not contain any conflicting statements. Otherwise, it should be marked as Incorrect.
-    """
+    sys_msg = """Evaluate the answer of a AI model to a question."""
     user_prompt = f"""QUESTION: {question}\n AI ANSWER: {llm_answer}\n TRUE ANSWER: {answer}\n GRADE: """
     return [
         {"role": "system", "content": sys_msg}, 
@@ -50,17 +47,17 @@ def expand_labels(row):
 def evaluate(datasets, model, num_threads=10):
     for dataset in datasets:
         print(f"Processing {dataset}")
-        df = pd.read_json(f"questions/{dataset}.json")
+        df = pd.read_json(f"questions/{dataset}")
         expanded_df = df['options'].apply(expand_labels).apply(pd.Series)
         df = pd.concat([df, expanded_df], axis=1)
-        responses = pd.read_json(f"{model}/{dataset}.json")
+        responses = pd.read_json(f"{model}/{dataset}")
         df['os_answer'] = responses['os_answer']
         df['input'] = df.apply(lambda x: create_chat_prompt(x['question'], x['os_answer'], x[x['answerKey']]), axis=1)
         prompts = df['input'].tolist()
-        df['os_eval'] = run(prompts)
-        df['gold_answer'] = df.apply(lambda x: x[x['AnswerKey']], axis=1)
+        df['os_eval'] = run(prompts, num_threads)
+        df['gold_answer'] = df.apply(lambda x: x[x['answerKey']], axis=1)
         os.makedirs(f"evaluations/{model}", exist_ok=True)
-        df[['question', 'gold_answer', 'os_answer', 'os_eval']].to_json(f"evaluations/{model}/{dataset}.json", orient='records')
+        df[['question', 'gold_answer', 'os_answer', 'os_eval']].to_json(f"evaluations/{model}/{dataset}", orient='records')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
