@@ -31,7 +31,14 @@ def run(prompts, num_threads):
     return idx_and_result
 
 def create_chat_prompt(question, llm_answer, answer):
-    sys_msg = """Evaluate the answer of a AI model to a question."""
+    sys_msg = """Evaluate the answer of a AI model to a question. You will be provided with the question, the AI model’s answer, and the correct answer. Your task is to evaluate the AI model’s response and determine whether it is Correct or Incorrect.
+            Grade the AI model answers based ONLY on their factual accuracy. It is OK if the AI model answer contains more information than the true answer, as long as it does not contain any conflicting statements. Otherwise, it should be marked as Incorrect. Ignore differences in punctuation and phrasing between the AI model’s answer and the true answer.
+            Example Format:
+            QUESTION: question here
+            STUDENT ANSWER: student’s answer here
+            TRUE ANSWER: true answer here
+            GRADE: Correct or Incorrect here
+            Your response should include only the verdict without any justification or reasoning"""
     user_prompt = f"""QUESTION: {question}\n AI ANSWER: {llm_answer}\n TRUE ANSWER: {answer}\n GRADE: """
     return [
         {"role": "system", "content": sys_msg}, 
