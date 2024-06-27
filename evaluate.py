@@ -35,7 +35,7 @@ def create_chat_prompt(question, llm_answer, answer):
             Grade the AI model answers based ONLY on their factual accuracy. It is OK if the AI model answer contains more information than the true answer, as long as it does not contain any conflicting statements. Otherwise, it should be marked as Incorrect. Ignore differences in punctuation and phrasing between the AI model’s answer and the true answer.
             Example Format:
             QUESTION: question here
-            STUDENT ANSWER: student’s answer here
+            AI ANSWER: AI answer here
             TRUE ANSWER: true answer here
             GRADE: Correct or Incorrect here
             Your response should include only the verdict without any justification or reasoning"""
